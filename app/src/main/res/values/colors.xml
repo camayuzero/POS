@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorTabLayout_Background">#33B5E5</color>
+    <color name="colorTabLayout_SelectedTextColor">#AA1111</color>
+    <color name="colorTabLayout_TextColor">#000000</color>
 </resources>
