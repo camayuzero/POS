@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">POS</string>
+
+    <string name="Drinks_Amount">結帳</string>
+
+    <string name="DrinksType_Tea">純茶類</string>
+    <string name="DrinksType_MilkTea">奶茶類</string>
+
+    <string name="Tea_CeylonBlackTea">錫蘭紅茶</string>
+    <string name="Tea_DarjeelingTea">大吉嶺紅茶</string>
+    <string name="Tea_JasmineGreenTea">茉香綠茶</string>
+    <string name="Tea_OolongTea">烏龍茶</string>
+    <string name="Tea_PuerhTea">普爾茶</string>
+    <string name="Tea_ChrysanthemumTea">菊花茶</string>
+
+    <string name="MilkTea_BubbleMilkTea">珍珠奶茶</string>
+    <string name="MilkTea_CoconutMilkTea">椰果奶茶</string>
+    <string name="MilkTea_PuddingMilkTea">布丁奶茶</string>
+    <string name="MilkTea_KantenMilkTea">寒天凍奶茶</string>
+    <string name="MilkTea_GrassJellyMilkTea">仙草凍奶茶</string>
+
+    <string name="Ingredients_TapiocaBalls">珍珠</string>
+    <string name="Ingredients_SmallTapiocaBalls">小珍珠</string>
+    <string name="Ingredients_Coconut">椰果</string>
+    <string name="Ingredients_Pudding">布丁</string>
+    <string name="Ingredients_Kanten">寒天</string>
+    <string name="Ingredients_GrassJelly">仙草</string>
+
+    <string name="Ice_none">去冰</string>
+    <string name="Ice_Micro">微冰</string>
+    <string name="Ice_Less">少冰</string>
+    <string name="Ice_Normal">正常</string>
+    <string name="Ice_More">多冰</string>
+
+    <string name="Sugar_none">無糖</string>
+    <string name="Sugar_Micro">微糖</string>
+    <string name="Sugar_Less">少糖</string>
+    <string name="Sugar_Normal">正常</string>
+    <string name="Sugar_More">多糖</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
