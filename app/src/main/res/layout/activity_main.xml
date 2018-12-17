@@ -11,8 +11,8 @@
         android:id="@+id/tabLayout_Drinks"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:background="@color/colorTabLayout_Background"
-        app:tabSelectedTextColor="@color/colorTabLayout_SelectedTextColor"
+        android:background="@color/color_TabLayoutBackground"
+        app:tabSelectedTextColor="@color/color_TabLayoutSelectedTextColor"
         app:tabTextAppearance="@style/TabLayoutTextStyle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,9 +35,19 @@
         android:id="@+id/viewPager_Drinks"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout_Drinks" />
+
+    <fragment
+        android:id="@+id/fragmentAmount"
+        android:name="tw.org.iii.pos.AmountFragment"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager_Drinks" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,13 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DrinksTeaFragment">
+    android:background="@color/color_FragmentBackground01"
+    tools:context=".DrinksTeaFragment"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/textView_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/DrinksType_Tea" />
+        android:layout_marginStart="100dp"
+        android:background="@color/color_TitleBackground"
+        android:text="@string/DrinksTitle_Name"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity01_Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_TitleBackground"
+        android:text="@string/DrinksTitle_Price"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_Name"
+        app:layout_constraintTop_toTopOf="@+id/textView_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity01_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_CeylonBlackTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity01_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity01_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity02_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_DarjeelingTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity02_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity02_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity03_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_JasmineGreenTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity03_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity03_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity04_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_OolongTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity04_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity04_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity05_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_PuerhTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity05_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity05_Name" />
+
+    <TextView
+        android:id="@+id/textView_Commodity06_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Price_ChrysanthemumTea"
+        android:textSize="@dimen/textSize25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity06_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity06_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity01_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_CeylonBlackTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity02_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity02_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_DarjeelingTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity03_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity01_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity03_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_JasmineGreenTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity04_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity02_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity04_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_OolongTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity05_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity03_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity05_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_PuerhTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity06_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity04_Name" />
+
+    <Button
+        android:id="@+id/button_Commodity06_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Tea_ChrysanthemumTea"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity05_Name" />
+
+</android.support.constraint.ConstraintLayout>

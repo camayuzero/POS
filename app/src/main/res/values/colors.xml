@@ -3,7 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="colorTabLayout_Background">#33B5E5</color>
-    <color name="colorTabLayout_SelectedTextColor">#AA1111</color>
-    <color name="colorTabLayout_TextColor">#000000</color>
+    <color name="color_TabLayoutBackground">#33B5E5</color>
+    <color name="color_TabLayoutSelectedTextColor">#AA1111</color>
+    <color name="color_TabLayoutTextColor">#000000</color>
+    <color name="color_FragmentBackground01">#FFDDAA</color>
+    <color name="color_FragmentBackground02">#FFFFBB</color>
+    <color name="color_Title">#0000FF</color>
+    <color name="color_TitleBackground">#FF7744</color>
+
 </resources>

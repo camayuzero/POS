@@ -37,16 +37,16 @@ public class ActivityMain extends AppCompatActivity {
                 case 1:
                     fragment = new DrinksMilkTeaFragment();
                     break;
-                case 2:
-                    fragment = new AmountFragment();
-                    break;
+//                case 2:
+//                    fragment = new AmountFragment();
+//                    break;
             }
             return fragment;
         }
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Nullable
@@ -57,8 +57,8 @@ public class ActivityMain extends AppCompatActivity {
                     return "純茶類";
                 case 1 :
                     return "奶茶類";
-                case 2:
-                    return "結帳";
+//                case 2:
+//                    return "結帳";
                 default:
                     return null;
             }
