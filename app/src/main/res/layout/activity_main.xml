@@ -10,25 +10,26 @@
     <android.support.design.widget.TabLayout
         android:id="@+id/tabLayout_Drinks"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/layout_height_40dp"
         android:background="@color/color_TabLayoutBackground"
-        app:tabSelectedTextColor="@color/color_TabLayoutSelectedTextColor"
-        app:tabTextAppearance="@style/TabLayoutTextStyle"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager_Drinks"
+        app:layout_constraintEnd_toStartOf="@+id/fragmentDisplay"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabSelectedTextColor="@color/color_TabLayoutSelectedTextColor"
+        app:tabTextAppearance="@style/TabLayoutTextStyle">
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <android.support.design.widget.TabItem
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
     </android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
@@ -36,7 +37,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/fragmentAmount"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragmentDisplay"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout_Drinks" />
 
@@ -49,5 +50,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewPager_Drinks" />
+
+    <fragment
+        android:id="@+id/fragmentDisplay"
+        android:name="tw.org.iii.pos.DisplayFragment"
+        android:layout_width="158dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewPager_Drinks"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

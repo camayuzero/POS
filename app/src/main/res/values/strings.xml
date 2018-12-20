@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">POS</string>
 
-    <!--Tab標籤-->
+    <!--Title-->
     <string name="Drinks_Amount">結帳</string>
+    <string name="Drinks_PurchaseList">購買清單</string>
     <string name="DrinksType_Tea">純茶類</string>
     <string name="DrinksType_MilkTea">奶茶類</string>
 
@@ -62,6 +63,24 @@
     <string name="Price_KantenMilkTea">45</string>
     <string name="Price_GrassJellyMilkTea">45</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!--按鈕-->
+    <string name="button_01">1</string>
+    <string name="button_02">2</string>
+    <string name="button_03">3</string>
+    <string name="button_04">4</string>
+    <string name="button_05">5</string>
+    <string name="button_06">6</string>
+    <string name="button_07">7</string>
+    <string name="button_08">8</string>
+    <string name="button_09">9</string>
+    <string name="button_00">0</string>
+    <string name="button_500">500</string>
+    <string name="button_1000">1000</string>
+    <string name="button_Amount">結帳</string>
+    <string name="button_Change">找零</string>
+    <string name="button_Correction">訂正</string>
+    <string name="button_Delete">刪除</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

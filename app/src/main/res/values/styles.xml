@@ -14,5 +14,7 @@
     <dimen name="textSize20sp">20sp</dimen>
     <dimen name="textSize25sp">25sp</dimen>
     <dimen name="textSize30sp">30sp</dimen>
+    <dimen name="layout_width_130dp">130dp</dimen>
+    <dimen name="layout_height_40dp">40dp</dimen>
 
 </resources>

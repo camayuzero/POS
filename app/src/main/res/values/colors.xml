@@ -10,5 +10,6 @@
     <color name="color_FragmentBackground02">#FFFFBB</color>
     <color name="color_Title">#0000FF</color>
     <color name="color_TitleBackground">#FF7744</color>
+    <color name="color_TitleBackground02">#FFC8B4</color>
 
 </resources>
