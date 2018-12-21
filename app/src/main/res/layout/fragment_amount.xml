@@ -3,18 +3,407 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".AmountFragment"
-    tools:layout_editor_absoluteY="73dp">
+    android:layout_height="@dimen/amount_layout_height_220dp"
+    android:background="@color/color_TitleBackground06"
+    tools:context=".AmountFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/button_00"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_45dp"
+        android:text="@string/button_00"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_07"
+        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintTop_toBottomOf="@+id/button_01" />
 
     <Button
         android:id="@+id/button_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="51dp" />
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_01"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_00"
+        app:layout_constraintEnd_toEndOf="@+id/button_07"
+        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintTop_toBottomOf="@+id/button_04" />
+
+    <Button
+        android:id="@+id/button_02"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_02"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_500"
+        app:layout_constraintEnd_toEndOf="@+id/button_08"
+        app:layout_constraintStart_toStartOf="@+id/button_08"
+        app:layout_constraintTop_toBottomOf="@+id/button_05" />
+
+    <Button
+        android:id="@+id/button_03"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_03"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_1000"
+        app:layout_constraintEnd_toEndOf="@+id/button_09"
+        app:layout_constraintStart_toStartOf="@+id/button_09"
+        app:layout_constraintTop_toBottomOf="@+id/button_06" />
+
+    <Button
+        android:id="@+id/button_04"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_04"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_01"
+        app:layout_constraintEnd_toEndOf="@+id/button_07"
+        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintTop_toBottomOf="@+id/button_07" />
+
+    <Button
+        android:id="@+id/button_05"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_05"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_02"
+        app:layout_constraintEnd_toEndOf="@+id/button_08"
+        app:layout_constraintStart_toStartOf="@+id/button_08"
+        app:layout_constraintTop_toBottomOf="@+id/button_08" />
+
+    <Button
+        android:id="@+id/button_06"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_06"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_03"
+        app:layout_constraintEnd_toEndOf="@+id/button_09"
+        app:layout_constraintStart_toStartOf="@+id/button_09"
+        app:layout_constraintTop_toBottomOf="@+id/button_09" />
+
+    <Button
+        android:id="@+id/button_07"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_07"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_04"
+        app:layout_constraintEnd_toStartOf="@+id/button_08"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_08"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_08"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_05"
+        app:layout_constraintEnd_toStartOf="@+id/button_09"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_07"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_09"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_09"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_06"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_08"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_500"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_45dp"
+        android:text="@string/button_500"
+        android:textSize="@dimen/textSize10sp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_08"
+        app:layout_constraintStart_toStartOf="@+id/button_08"
+        app:layout_constraintTop_toBottomOf="@+id/button_02" />
+
+    <Button
+        android:id="@+id/button_1000"
+        android:layout_width="@dimen/button_width_40dp"
+        android:layout_height="@dimen/button_height_45dp"
+        android:text="@string/button_1000"
+        android:textSize="@dimen/textSize10sp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_09"
+        app:layout_constraintStart_toStartOf="@+id/button_09"
+        app:layout_constraintTop_toBottomOf="@+id/button_03" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup_SugarContent"
+        android:layout_width="@dimen/RadioGroup_layout_width_70dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/color_TitleBackground03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_IceContent"
+        app:layout_constraintStart_toEndOf="@+id/button_09"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_SugarContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_TitleBackground03"
+            android:text="@string/Title_SugarContent"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sugar_none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sugar_none"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sugar_Micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sugar_Micro"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sugar_Less"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sugar_Less"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sugar_Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sugar_Normal"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Sugar_More"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Sugar_More"
+            android:textSize="@dimen/textSize15sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_IceContent"
+        android:layout_width="@dimen/RadioGroup_layout_width_70dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/color_TitleBackground04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_Ingredients"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup_SugarContent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_IceContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_TitleBackground04"
+            android:text="@string/Title_IceContent"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Ice_none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ice_none"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Ice_Micro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ice_Micro"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Ice_Less"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ice_Less"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Ice_Normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ice_Normal"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Ice_More"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ice_More"
+            android:textSize="@dimen/textSize15sp" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Ingredients"
+        android:layout_width="@dimen/RadioGroup_layout_width_70dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@color/color_TitleBackground05"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_Query"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup_IceContent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_Ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/color_TitleBackground05"
+            android:text="@string/Title_Ingredients"
+            android:textAlignment="center"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_TapiocaBalls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_TapiocaBalls"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_SmallTapiocaBalls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_SmallTapiocaBalls"
+            android:textSize="@dimen/textSize12sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Coconut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_Coconut"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Kanten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_Kanten"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_GrassJelly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_GrassJelly"
+            android:textSize="@dimen/textSize15sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_Pudding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Ingredients_Pudding"
+            android:textSize="@dimen/textSize15sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_Query"
+        android:layout_width="@dimen/button_width_60dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_Query"
+        android:textSize="@dimen/textSize12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup_Ingredients"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/button_Amount"
+        android:layout_width="@dimen/button_width_60dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/Title_Amount"
+        android:textSize="@dimen/textSize12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Correction"
+        app:layout_constraintEnd_toEndOf="@+id/button_Query"
+        app:layout_constraintStart_toStartOf="@+id/button_Query"
+        app:layout_constraintTop_toBottomOf="@+id/button_Query" />
+
+    <!--<Button-->
+    <!--android:id="@+id/button_Change"-->
+    <!--android:layout_width="@dimen/button_width_60dp"-->
+    <!--android:layout_height="@dimen/button_height_35dp"-->
+    <!--android:text="@string/button_Change"-->
+    <!--android:textSize="@dimen/textSize12sp"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/button_Correction"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/button_Query"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/button_Query"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/button_Amount" />-->
+
+    <Button
+        android:id="@+id/button_Correction"
+        android:layout_width="@dimen/button_width_60dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_Correction"
+        android:textSize="@dimen/textSize12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Delete"
+        app:layout_constraintEnd_toEndOf="@+id/button_Query"
+        app:layout_constraintStart_toStartOf="@+id/button_Query"
+        app:layout_constraintTop_toBottomOf="@+id/button_Amount" />
+
+    <Button
+        android:id="@+id/button_Delete"
+        android:layout_width="@dimen/button_width_60dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_Delete"
+        android:textSize="@dimen/textSize12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Confirm"
+        app:layout_constraintEnd_toEndOf="@+id/button_Query"
+        app:layout_constraintStart_toStartOf="@+id/button_Query"
+        app:layout_constraintTop_toBottomOf="@+id/button_Correction" />
+
+    <Button
+        android:id="@+id/button_Confirm"
+        android:layout_width="@dimen/button_width_60dp"
+        android:layout_height="@dimen/button_height_40dp"
+        android:text="@string/button_Confirm"
+        android:textSize="@dimen/textSize12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_Query"
+        app:layout_constraintStart_toStartOf="@+id/button_Query"
+        app:layout_constraintTop_toBottomOf="@+id/button_Delete" />
 
 </android.support.constraint.ConstraintLayout>

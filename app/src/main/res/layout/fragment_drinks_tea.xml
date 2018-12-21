@@ -9,30 +9,31 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/textView_Name"
+        android:id="@+id/textView_Name01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Name"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity01_Name"
-        app:layout_constraintEnd_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Price01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_Price"
+        android:id="@+id/textView_Price01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Price"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_Name"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Name01"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_Name"
-        app:layout_constraintTop_toTopOf="@+id/textView_Name" />
+        app:layout_constraintStart_toEndOf="@+id/textView_Name01"
+        app:layout_constraintTop_toTopOf="@+id/textView_Name01" />
 
     <TextView
         android:id="@+id/textView_Commodity01_Price"
@@ -41,8 +42,8 @@
         android:text="@string/Price_CeylonBlackTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity01_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity01_Name" />
 
     <TextView
@@ -52,8 +53,8 @@
         android:text="@string/Price_DarjeelingTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity02_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity02_Name" />
 
     <TextView
@@ -63,8 +64,8 @@
         android:text="@string/Price_JasmineGreenTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity03_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity03_Name" />
 
     <TextView
@@ -74,8 +75,8 @@
         android:text="@string/Price_OolongTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity04_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity04_Name" />
 
     <TextView
@@ -85,8 +86,8 @@
         android:text="@string/Price_PuerhTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity05_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity05_Name" />
 
     <TextView
@@ -96,74 +97,75 @@
         android:text="@string/Price_ChrysanthemumTea"
         android:textSize="@dimen/textSize25sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_Commodity06_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price01"
         app:layout_constraintTop_toTopOf="@+id/button_Commodity06_Name" />
 
     <Button
         android:id="@+id/button_Commodity01_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/Tea_CeylonBlackTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity02_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Name" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Name01" />
 
     <Button
         android:id="@+id/button_Commodity02_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/Tea_DarjeelingTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity03_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
         app:layout_constraintTop_toBottomOf="@+id/button_Commodity01_Name" />
 
     <Button
         android:id="@+id/button_Commodity03_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/Tea_JasmineGreenTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity04_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
         app:layout_constraintTop_toBottomOf="@+id/button_Commodity02_Name" />
 
     <Button
         android:id="@+id/button_Commodity04_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/Tea_OolongTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity05_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
         app:layout_constraintTop_toBottomOf="@+id/button_Commodity03_Name" />
 
     <Button
         android:id="@+id/button_Commodity05_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/Tea_PuerhTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/button_Commodity06_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
         app:layout_constraintTop_toBottomOf="@+id/button_Commodity04_Name" />
 
     <Button
         android:id="@+id/button_Commodity06_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="@string/Tea_ChrysanthemumTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name01"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name01"
         app:layout_constraintTop_toBottomOf="@+id/button_Commodity05_Name" />
 
 </android.support.constraint.ConstraintLayout>

@@ -2,10 +2,17 @@
     <string name="app_name">POS</string>
 
     <!--Title-->
-    <string name="Drinks_Amount">結帳</string>
-    <string name="Drinks_PurchaseList">購買清單</string>
-    <string name="DrinksType_Tea">純茶類</string>
-    <string name="DrinksType_MilkTea">奶茶類</string>
+    <string name="Title_Amount">結帳</string>
+    <string name="Title_PurchaseList">購買清單</string>
+    <string name="Title_Type_Tea">純茶類</string>
+    <string name="Title_Type_MilkTea">奶茶類</string>
+    <string name="Title_SugarContent">糖量</string>
+    <string name="Title_IceContent">冰量</string>
+    <string name="Title_Ingredients">配料</string>
+    <string name="Title_History">歷史紀錄</string>
+    <string name="Title_TotalAmount">小計</string>
+    <string name="Title_Pay">付款</string>
+    <string name="Title_Change">找回</string>
 
     <!--標題-->
     <string name="DrinksTitle_Name">品名</string>
@@ -27,28 +34,6 @@
     <string name="MilkTea_PuddingMilkTea">布丁奶茶</string>
     <string name="MilkTea_KantenMilkTea">寒天凍奶茶</string>
     <string name="MilkTea_GrassJellyMilkTea">仙草凍奶茶</string>
-
-    <!--配料-->
-    <string name="Ingredients_TapiocaBalls">珍珠</string>
-    <string name="Ingredients_SmallTapiocaBalls">小珍珠</string>
-    <string name="Ingredients_Coconut">椰果</string>
-    <string name="Ingredients_Pudding">布丁</string>
-    <string name="Ingredients_Kanten">寒天</string>
-    <string name="Ingredients_GrassJelly">仙草</string>
-
-    <!--冰量-->
-    <string name="Ice_none">去冰</string>
-    <string name="Ice_Micro">微冰</string>
-    <string name="Ice_Less">少冰</string>
-    <string name="Ice_Normal">正常</string>
-    <string name="Ice_More">多冰</string>
-
-    <!--糖量-->
-    <string name="Sugar_none">無糖</string>
-    <string name="Sugar_Micro">微糖</string>
-    <string name="Sugar_Less">少糖</string>
-    <string name="Sugar_Normal">正常</string>
-    <string name="Sugar_More">多糖</string>
 
     <!--價格-->
     <string name="Price_CeylonBlackTea">20</string>
@@ -80,7 +65,30 @@
     <string name="button_Change">找零</string>
     <string name="button_Correction">訂正</string>
     <string name="button_Delete">刪除</string>
+    <string name="button_Confirm">確定</string>
+    <string name="button_Query">查詢</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--配料-->
+    <string name="Ingredients_TapiocaBalls">珍珠</string>
+    <string name="Ingredients_SmallTapiocaBalls">小珍珠</string>
+    <string name="Ingredients_Coconut">椰果</string>
+    <string name="Ingredients_Pudding">布丁</string>
+    <string name="Ingredients_Kanten">寒天</string>
+    <string name="Ingredients_GrassJelly">仙草</string>
+    <string name="Ingredients_None">無</string>
+
+    <!--冰量-->
+    <string name="Ice_none">去冰</string>
+    <string name="Ice_Micro">微冰</string>
+    <string name="Ice_Less">少冰</string>
+    <string name="Ice_Normal">正常</string>
+    <string name="Ice_More">多冰</string>
+
+    <!--糖量-->
+    <string name="Sugar_none">無糖</string>
+    <string name="Sugar_Micro">微糖</string>
+    <string name="Sugar_Less">少糖</string>
+    <string name="Sugar_Normal">正常</string>
+    <string name="Sugar_More">多糖</string>
+
 </resources>

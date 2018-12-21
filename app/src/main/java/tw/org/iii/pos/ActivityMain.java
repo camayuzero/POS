@@ -1,5 +1,6 @@
 package tw.org.iii.pos;
 
+import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -37,9 +38,6 @@ public class ActivityMain extends AppCompatActivity {
                 case 1:
                     fragment = new DrinksMilkTeaFragment();
                     break;
-//                case 2:
-//                    fragment = new AmountFragment();
-//                    break;
             }
             return fragment;
         }
@@ -57,8 +55,6 @@ public class ActivityMain extends AppCompatActivity {
                     return "純茶類";
                 case 1 :
                     return "奶茶類";
-//                case 2:
-//                    return "結帳";
                 default:
                     return null;
             }

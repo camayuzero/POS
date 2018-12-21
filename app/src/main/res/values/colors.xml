@@ -8,8 +8,13 @@
     <color name="color_TabLayoutTextColor">#000000</color>
     <color name="color_FragmentBackground01">#FFDDAA</color>
     <color name="color_FragmentBackground02">#FFFFBB</color>
+    <color name="color_FragmentBackground03">#BBFFEE</color>
     <color name="color_Title">#0000FF</color>
     <color name="color_TitleBackground">#FF7744</color>
     <color name="color_TitleBackground02">#FFC8B4</color>
+    <color name="color_TitleBackground03">#EEFFBB</color>
+    <color name="color_TitleBackground04">#CCFF99</color>
+    <color name="color_TitleBackground05">#BBFFEE</color>
+    <color name="color_TitleBackground06">#0000FF</color>
 
 </resources>

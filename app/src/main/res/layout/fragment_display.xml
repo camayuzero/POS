@@ -7,13 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".DisplayFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/color_FragmentBackground03"
+        app:layout_constraintBottom_toTopOf="@+id/editText_TotalAmount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_PurchaseList" />
@@ -21,13 +20,95 @@
     <TextView
         android:id="@+id/textView_PurchaseList"
         android:layout_width="0dp"
-        android:layout_height="@dimen/layout_height_40dp"
+        android:layout_height="@dimen/TabLayout_height_35dp"
         android:background="@color/color_TitleBackground02"
-        android:text="@string/Drinks_PurchaseList"
+        android:text="@string/Title_PurchaseList"
         android:textAlignment="center"
-        android:textSize="@dimen/textSize25sp"
+        android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_TotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_TitleBackground02"
+        android:text="@string/Title_TotalAmount"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Pay"
+        app:layout_constraintEnd_toStartOf="@+id/editText_TotalAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textView_Pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_TitleBackground02"
+        android:text="@string/Title_Pay"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Change"
+        app:layout_constraintEnd_toStartOf="@+id/editText_Pay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_TotalAmount" />
+
+    <TextView
+        android:id="@+id/textView_Change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_TitleBackground02"
+        android:text="@string/Title_Change"
+        android:textSize="@dimen/textSize20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editText_Change"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Pay" />
+
+    <EditText
+        android:id="@+id/editText_TotalAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:enabled="false"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_TotalAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_TotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/textView_TotalAmount" />
+
+    <EditText
+        android:id="@+id/editText_Pay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:enabled="false"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Pay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_Pay"
+        app:layout_constraintTop_toTopOf="@+id/textView_Pay" />
+
+    <EditText
+        android:id="@+id/editText_Change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:enabled="false"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Change"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView_Change"
+        app:layout_constraintTop_toTopOf="@+id/textView_Change" />
+
 </android.support.constraint.ConstraintLayout>

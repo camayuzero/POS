@@ -8,140 +8,142 @@
     tools:context=".DrinksMilkTeaFragment">
 
     <TextView
-        android:id="@+id/textView_Name"
+        android:id="@+id/textView_Name11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Name"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Commodity01_Name"
-        app:layout_constraintEnd_toStartOf="@+id/textView_Price"
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity11_Name"
+        app:layout_constraintEnd_toStartOf="@+id/textView_Price11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_Price"
+        android:id="@+id/textView_Price11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Price"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView_Name"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_Name11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_Name"
-        app:layout_constraintTop_toTopOf="@+id/textView_Name" />
+        app:layout_constraintStart_toEndOf="@+id/textView_Name11"
+        app:layout_constraintTop_toTopOf="@+id/textView_Name11" />
 
     <TextView
-        android:id="@+id/textView_Commodity01_Price"
+        android:id="@+id/textView_Commodity11_Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Price_BubbleMilkTea"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity01_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
-        app:layout_constraintTop_toTopOf="@+id/button_Commodity01_Name" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity11_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price11"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity11_Name" />
 
     <TextView
-        android:id="@+id/textView_Commodity02_Price"
+        android:id="@+id/textView_Commodity12_Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Price_CoconutMilkTea"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity02_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
-        app:layout_constraintTop_toTopOf="@+id/button_Commodity02_Name" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity12_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price11"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity12_Name" />
 
     <TextView
-        android:id="@+id/textView_Commodity03_Price"
+        android:id="@+id/textView_Commodity13_Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Price_GrassJellyMilkTea"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity03_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
-        app:layout_constraintTop_toTopOf="@+id/button_Commodity03_Name" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity13_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price11"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity13_Name" />
 
     <TextView
-        android:id="@+id/textView_Commodity04_Price"
+        android:id="@+id/textView_Commodity14_Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Price_KantenMilkTea"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity04_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
-        app:layout_constraintTop_toTopOf="@+id/button_Commodity04_Name" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity14_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price11"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity14_Name" />
 
     <TextView
-        android:id="@+id/textView_Commodity05_Price"
+        android:id="@+id/textView_Commodity15_Price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Price_PuddingMilkTea"
         android:textSize="@dimen/textSize25sp"
-        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity05_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Price"
-        app:layout_constraintStart_toStartOf="@+id/textView_Price"
-        app:layout_constraintTop_toTopOf="@+id/button_Commodity05_Name" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_Commodity15_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Price11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Price11"
+        app:layout_constraintTop_toTopOf="@+id/button_Commodity15_Name" />
 
     <Button
-        android:id="@+id/button_Commodity01_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:id="@+id/button_Commodity11_Name"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/MilkTea_BubbleMilkTea"
         android:textSize="@dimen/textSize20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Commodity02_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Name" />
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity12_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name11"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Name11" />
 
     <Button
-        android:id="@+id/button_Commodity02_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:id="@+id/button_Commodity12_Name"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/MilkTea_CoconutMilkTea"
         android:textSize="@dimen/textSize20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Commodity03_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/button_Commodity01_Name" />
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity13_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name11"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity11_Name" />
 
     <Button
-        android:id="@+id/button_Commodity03_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:id="@+id/button_Commodity13_Name"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/MilkTea_GrassJellyMilkTea"
         android:textSize="@dimen/textSize20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Commodity04_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/button_Commodity02_Name" />
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity14_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name11"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity12_Name" />
 
     <Button
-        android:id="@+id/button_Commodity04_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:id="@+id/button_Commodity14_Name"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
         android:text="@string/MilkTea_KantenMilkTea"
         android:textSize="@dimen/textSize20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_Commodity05_Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/button_Commodity03_Name" />
+        app:layout_constraintBottom_toTopOf="@+id/button_Commodity15_Name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name11"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity13_Name" />
 
     <Button
-        android:id="@+id/button_Commodity05_Name"
-        android:layout_width="@dimen/layout_width_130dp"
+        android:id="@+id/button_Commodity15_Name"
+        android:layout_width="@dimen/button_tea_layout_width_130dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="@string/MilkTea_PuddingMilkTea"
         android:textSize="@dimen/textSize20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView_Name"
-        app:layout_constraintStart_toStartOf="@+id/textView_Name"
-        app:layout_constraintTop_toBottomOf="@+id/button_Commodity04_Name" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_Name11"
+        app:layout_constraintStart_toStartOf="@+id/textView_Name11"
+        app:layout_constraintTop_toBottomOf="@+id/button_Commodity14_Name" />
 
 
 </android.support.constraint.ConstraintLayout>
