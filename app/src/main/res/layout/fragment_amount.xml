@@ -12,13 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Name"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintBottom_toTopOf="@id/textView_select_commodity_price"
         app:layout_constraintEnd_toStartOf="@id/editText_select_commodity_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <EditText
         android:id="@+id/editText_select_commodity_name"
@@ -37,17 +40,50 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <TextView
+        android:id="@+id/textView_select_commodity_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/color_TitleBackground"
+        android:text="@string/DrinksTitle_Price"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintEnd_toStartOf="@id/editText_select_commodity_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_select_commodity_name" />
+
+    <EditText
+        android:id="@+id/editText_select_commodity_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:background="@color/color_EditTextBackground"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_price"
+        app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
+        app:layout_constraintStart_toEndOf="@id/textView_select_commodity_price"
+        app:layout_constraintTop_toTopOf="@id/textView_select_commodity_price"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
         android:id="@+id/textView_select_commodity_quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/color_TitleBackground"
         android:text="@string/DrinksTitle_Quantity"
         android:textSize="@dimen/textSize15sp"
         app:layout_constraintBottom_toTopOf="@id/button_07"
         app:layout_constraintEnd_toStartOf="@id/editText_select_commodity_quantity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView_select_commodity_name" />
+        app:layout_constraintTop_toBottomOf="@id/textView_select_commodity_price" />
 
     <EditText
         android:id="@+id/editText_select_commodity_quantity"
@@ -68,139 +104,162 @@
     <Button
         android:id="@+id/button_00"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_45dp"
+        android:layout_height="@dimen/button_height_35dp"
+        android:layout_marginBottom="1dp"
         android:text="@string/button_00"
         android:textSize="@dimen/textSize15sp"
+        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_07"
-        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintEnd_toStartOf="@+id/button_500"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_01" />
 
     <Button
         android:id="@+id/button_01"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_01"
         android:textSize="@dimen/textSize15sp"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button_00"
         app:layout_constraintEnd_toEndOf="@+id/button_07"
-        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintEnd_toStartOf="@+id/button_02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_04" />
 
     <Button
         android:id="@+id/button_02"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_02"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_500"
-        app:layout_constraintEnd_toEndOf="@+id/button_08"
-        app:layout_constraintStart_toStartOf="@+id/button_08"
-        app:layout_constraintTop_toBottomOf="@+id/button_05" />
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_01"
+        app:layout_constraintEnd_toStartOf="@+id/button_03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_01"
+        app:layout_constraintTop_toTopOf="@+id/button_01" />
 
     <Button
         android:id="@+id/button_03"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_03"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_1000"
-        app:layout_constraintEnd_toEndOf="@+id/button_09"
-        app:layout_constraintStart_toStartOf="@+id/button_09"
-        app:layout_constraintTop_toBottomOf="@+id/button_06" />
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_02"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_02"
+        app:layout_constraintTop_toTopOf="@+id/button_02" />
 
     <Button
         android:id="@+id/button_04"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_04"
         android:textSize="@dimen/textSize15sp"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button_01"
         app:layout_constraintEnd_toEndOf="@+id/button_07"
-        app:layout_constraintStart_toStartOf="@+id/button_07"
+        app:layout_constraintEnd_toStartOf="@+id/button_05"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_07" />
 
     <Button
         android:id="@+id/button_05"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_05"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_02"
-        app:layout_constraintEnd_toEndOf="@+id/button_08"
-        app:layout_constraintStart_toStartOf="@+id/button_08"
-        app:layout_constraintTop_toBottomOf="@+id/button_08" />
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_04"
+        app:layout_constraintEnd_toStartOf="@+id/button_06"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_04"
+        app:layout_constraintTop_toTopOf="@+id/button_04" />
 
     <Button
         android:id="@+id/button_06"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_06"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_03"
-        app:layout_constraintEnd_toEndOf="@+id/button_09"
-        app:layout_constraintStart_toStartOf="@+id/button_09"
-        app:layout_constraintTop_toBottomOf="@+id/button_09" />
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_05"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_05"
+        app:layout_constraintTop_toTopOf="@+id/button_05" />
 
     <Button
         android:id="@+id/button_07"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_07"
         android:textSize="@dimen/textSize15sp"
+        android:padding="0dp"
         app:layout_constraintBottom_toTopOf="@+id/button_04"
         app:layout_constraintEnd_toStartOf="@+id/button_08"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
+        app:layout_constraintTop_toBottomOf="@id/textView_select_commodity_quantity" />
 
     <Button
         android:id="@+id/button_08"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_08"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_05"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_07"
         app:layout_constraintEnd_toStartOf="@+id/button_09"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_07"
-        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
+        app:layout_constraintTop_toTopOf="@+id/button_07" />
 
     <Button
         android:id="@+id/button_09"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_40dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:text="@string/button_09"
         android:textSize="@dimen/textSize15sp"
-        app:layout_constraintBottom_toTopOf="@+id/button_06"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_08"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_08"
-        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
+        app:layout_constraintTop_toTopOf="@+id/button_08" />
 
     <Button
         android:id="@+id/button_500"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_45dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:padding="0dp"
         android:text="@string/button_500"
         android:textSize="@dimen/textSize10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_08"
-        app:layout_constraintStart_toStartOf="@+id/button_08"
-        app:layout_constraintTop_toBottomOf="@+id/button_02" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_00"
+        app:layout_constraintEnd_toStartOf="@+id/button_1000"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_00"
+        app:layout_constraintTop_toTopOf="@+id/button_00" />
 
     <Button
         android:id="@+id/button_1000"
         android:layout_width="@dimen/button_width_40dp"
-        android:layout_height="@dimen/button_height_45dp"
+        android:layout_height="@dimen/button_height_35dp"
         android:padding="0dp"
         android:text="@string/button_1000"
         android:textSize="@dimen/textSize10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button_09"
-        app:layout_constraintStart_toStartOf="@+id/button_09"
-        app:layout_constraintTop_toBottomOf="@+id/button_03" />
+        app:layout_constraintBottom_toBottomOf="@+id/button_500"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_500"
+        app:layout_constraintTop_toTopOf="@+id/button_500" />
 
 
     <RadioGroup

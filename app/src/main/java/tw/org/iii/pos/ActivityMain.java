@@ -16,8 +16,10 @@ public class ActivityMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+// TODO: 2018/12/22 將fragment加入fragmentManager 
+        fragmentManager = getSupportFragmentManager();
 
-        selectsPagerAdapter = new SelectsPagerAdapter(getSupportFragmentManager());
+        selectsPagerAdapter = new SelectsPagerAdapter(fragmentManager);
         InitialComponent();
     }
 
@@ -70,6 +72,7 @@ public class ActivityMain extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
+    FragmentManager fragmentManager;
     SelectsPagerAdapter selectsPagerAdapter;
     ViewPager viewPager;
     TabLayout tabLayout;

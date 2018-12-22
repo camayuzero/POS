@@ -1,5 +1,7 @@
 package tw.org.iii.pos;
 
+import android.widget.EditText;
+
 public class POS_Factory{
 
     public final String KEY_drink = "KEY_drink";
@@ -16,6 +18,7 @@ public class POS_Factory{
     private String drink_total_amount;  //總金額
     private String drink_pay;  //付款
     private String drink_change;  //找回
+
 
     public String getDrink_name() {
         return drink_name;
@@ -64,4 +67,5 @@ public class POS_Factory{
     public void setDrink_change(String drink_change) {
         this.drink_change = drink_change;
     }
+
 }

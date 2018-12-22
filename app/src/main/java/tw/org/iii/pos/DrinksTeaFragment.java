@@ -16,12 +16,14 @@ import android.widget.TextView;
  * A simple {@link Fragment} subclass.
  */
 public class DrinksTeaFragment extends Fragment {
-    // TODO: 2018/12/21 已取得名稱，繼續取得數量 
 
     private View.OnClickListener button_Commodity01_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             pos_factory.setDrink_name(button_Commodity01_Name.getText().toString());
+            Log.d("kk","pos_factory");
+            amountFragment.Set_commodity_name(pos_factory.getDrink_name());
+            Log.d("kk",pos_factory.getDrink_name());
         }
     };
 
@@ -69,6 +71,8 @@ public class DrinksTeaFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         pos_factory = new POS_Factory();
+        // TODO: 2018/12/22 傳值
+        amountFragment = new AmountFragment();
         InitialComponent();
     }
 
@@ -114,4 +118,5 @@ public class DrinksTeaFragment extends Fragment {
     TextView textView_Commodity06_Price;
 
     POS_Factory pos_factory;
+    AmountFragment amountFragment;
 }
