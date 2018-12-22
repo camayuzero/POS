@@ -7,6 +7,64 @@
     android:background="@color/color_TitleBackground06"
     tools:context=".AmountFragment">
 
+    <TextView
+        android:id="@+id/textView_select_commodity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@color/color_TitleBackground"
+        android:text="@string/DrinksTitle_Name"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintEnd_toStartOf="@id/editText_select_commodity_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_select_commodity_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:background="@color/color_EditTextBackground"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_name"
+        app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
+        app:layout_constraintStart_toEndOf="@id/textView_select_commodity_name"
+        app:layout_constraintTop_toTopOf="@id/textView_select_commodity_name"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <TextView
+        android:id="@+id/textView_select_commodity_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:background="@color/color_TitleBackground"
+        android:text="@string/DrinksTitle_Quantity"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toTopOf="@id/button_07"
+        app:layout_constraintEnd_toStartOf="@id/editText_select_commodity_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_select_commodity_name" />
+
+    <EditText
+        android:id="@+id/editText_select_commodity_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:background="@color/color_EditTextBackground"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/textSize15sp"
+        app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
+        app:layout_constraintStart_toEndOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintTop_toTopOf="@id/textView_select_commodity_quantity"
+        app:layout_constraintVertical_bias="0.333" />
+
     <Button
         android:id="@+id/button_00"
         android:layout_width="@dimen/button_width_40dp"
@@ -94,7 +152,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button_08"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
 
     <Button
         android:id="@+id/button_08"
@@ -106,7 +164,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button_09"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_07"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
 
     <Button
         android:id="@+id/button_09"
@@ -118,15 +176,15 @@
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_SugarContent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button_08"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/editText_select_commodity_quantity" />
 
     <Button
         android:id="@+id/button_500"
         android:layout_width="@dimen/button_width_40dp"
         android:layout_height="@dimen/button_height_45dp"
+        android:padding="0dp"
         android:text="@string/button_500"
         android:textSize="@dimen/textSize10sp"
-        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_08"
         app:layout_constraintStart_toStartOf="@+id/button_08"
@@ -136,9 +194,9 @@
         android:id="@+id/button_1000"
         android:layout_width="@dimen/button_width_40dp"
         android:layout_height="@dimen/button_height_45dp"
+        android:padding="0dp"
         android:text="@string/button_1000"
         android:textSize="@dimen/textSize10sp"
-        android:padding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_09"
         app:layout_constraintStart_toStartOf="@+id/button_09"
@@ -149,8 +207,10 @@
         android:id="@+id/radioGroup_SugarContent"
         android:layout_width="@dimen/RadioGroup_layout_width_70dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/color_TitleBackground03"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_IceContent"
         app:layout_constraintStart_toEndOf="@+id/button_09"
@@ -211,8 +271,10 @@
         android:id="@+id/radioGroup_IceContent"
         android:layout_width="@dimen/RadioGroup_layout_width_70dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/color_TitleBackground04"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/radioGroup_Ingredients"
         app:layout_constraintStart_toEndOf="@+id/radioGroup_SugarContent"
@@ -273,8 +335,10 @@
         android:id="@+id/radioGroup_Ingredients"
         android:layout_width="@dimen/RadioGroup_layout_width_70dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/color_TitleBackground05"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_Query"
         app:layout_constraintStart_toEndOf="@+id/radioGroup_IceContent"
@@ -405,5 +469,6 @@
         app:layout_constraintEnd_toEndOf="@+id/button_Query"
         app:layout_constraintStart_toStartOf="@+id/button_Query"
         app:layout_constraintTop_toBottomOf="@+id/button_Delete" />
+
 
 </android.support.constraint.ConstraintLayout>
