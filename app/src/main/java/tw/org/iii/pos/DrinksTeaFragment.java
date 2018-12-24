@@ -70,8 +70,7 @@ public class DrinksTeaFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        pos_factory = new POS_Factory();
-        // TODO: 2018/12/22 傳值
+        pos_factory = ((ActivityMain)getActivity()).Get_POS_Factory();
         amountFragment = new AmountFragment();
         InitialComponent();
     }
