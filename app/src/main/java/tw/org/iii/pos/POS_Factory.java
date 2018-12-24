@@ -4,6 +4,7 @@ import android.widget.EditText;
 
 public class POS_Factory{
 
+    //KEY
     public final String KEY_drink = "KEY_drink";
     public final String KEY_drink_name = "KEY_drink_name";
     public final String KEY_drink_price = "KEY_drink_price";
@@ -12,6 +13,11 @@ public class POS_Factory{
     public final String KEY_drink_pay = "KEY_drink_pay";
     public final String KEY_drink_change = "KEY_drink_change";
 
+    //TAG
+    public final String TAG_drinksTeaFragment = "TAG_drinksTeaFragment";
+    public final String TAG_drinksMilkTeaFragment = "TAG_drinksMilkTeaFragment";
+
+    //其他字串
     private String drink_name;  //飲料名稱
     private String drink_price; //飲料單價
     private String drink_quantity;  //飲料數量

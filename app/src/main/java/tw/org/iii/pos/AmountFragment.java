@@ -1,6 +1,7 @@
 package tw.org.iii.pos;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,9 +19,16 @@ import android.widget.EditText;
 public class AmountFragment extends Fragment {
 
     public void Set_commodity_name(String commodity_name){
-        Log.d("kk",commodity_name);
         editText_select_commodity_name.setText(commodity_name);
-        Log.d("kk","end");
+    }
+    public void Set_commodity_name(){
+        try{
+//            editText_select_commodity_name.setText("123");
+//            EditText aaaa = getView().findViewById(R.id.editText_select_commodity_name);
+        }catch (Exception e){
+            Log.d("kkk2",e.getMessage());
+        }
+
     }
 
     public void Set_commodity_price(String commodity_price){
@@ -34,7 +42,7 @@ public class AmountFragment extends Fragment {
     private View.OnClickListener button_00_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            editText_select_commodity_quantity.setText("0");
         }
     };
 
@@ -157,6 +165,7 @@ public class AmountFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        sharedPreferences = ((ActivityMain)getActivity()).Get_SharedPreferences();
         InitialComponent();
     }
 
@@ -228,4 +237,5 @@ public class AmountFragment extends Fragment {
     Button button_Delete;
     Button button_Confirm;
 
+    SharedPreferences sharedPreferences;
 }

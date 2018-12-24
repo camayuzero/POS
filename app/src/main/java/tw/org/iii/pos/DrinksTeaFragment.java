@@ -1,6 +1,7 @@
 package tw.org.iii.pos;
 
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -20,10 +22,14 @@ public class DrinksTeaFragment extends Fragment {
     private View.OnClickListener button_Commodity01_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity01_Name.getText().toString());
-            Log.d("kk","pos_factory");
-            amountFragment.Set_commodity_name(pos_factory.getDrink_name());
-            Log.d("kk",pos_factory.getDrink_name());
+
+            try{
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,button_Commodity01_Name.getText().toString());
+//            pos_factory.setDrink_name(button_Commodity01_Name.getText().toString());
+
+            }catch (Exception e){
+                Log.d("kkk1",e.getMessage());
+            }
         }
     };
 
@@ -70,9 +76,12 @@ public class DrinksTeaFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        pos_factory = new POS_Factory();
-        // TODO: 2018/12/22 傳值
-        amountFragment = new AmountFragment();
+//        pos_factory = new POS_Factory();
+        pos_factory = ((ActivityMain)getActivity()).Get_POS_Factory();
+        amountFragment = (AmountFragment) (((ActivityMain)getActivity()).Get_AmountFragment());
+//        amountFragment = new AmountFragment();
+        sharedPreferences = ((ActivityMain)getActivity()).Get_SharedPreferences();
+
         InitialComponent();
     }
 
@@ -117,6 +126,7 @@ public class DrinksTeaFragment extends Fragment {
     TextView textView_Commodity05_Price;
     TextView textView_Commodity06_Price;
 
-    POS_Factory pos_factory;
-    AmountFragment amountFragment;
+    private POS_Factory pos_factory;
+    private AmountFragment amountFragment;
+    private SharedPreferences sharedPreferences;
 }
