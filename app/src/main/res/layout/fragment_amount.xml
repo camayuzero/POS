@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/amount_layout_height_220dp"
+    android:id="@+id/fragment_amount"
     android:background="@color/color_TitleBackground06"
     tools:context=".AmountFragment">
 
@@ -33,6 +34,7 @@
         android:enabled="false"
         android:inputType="textPersonName"
         android:textSize="@dimen/textSize15sp"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_name"
         app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
         app:layout_constraintStart_toEndOf="@id/textView_select_commodity_name"
@@ -64,6 +66,7 @@
         android:enabled="false"
         android:inputType="textPersonName"
         android:textSize="@dimen/textSize15sp"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_price"
         app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
         app:layout_constraintStart_toEndOf="@id/textView_select_commodity_price"
@@ -95,6 +98,7 @@
         android:enabled="false"
         android:inputType="textPersonName"
         android:textSize="@dimen/textSize15sp"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/textView_select_commodity_quantity"
         app:layout_constraintEnd_toStartOf="@id/radioGroup_SugarContent"
         app:layout_constraintStart_toEndOf="@id/textView_select_commodity_quantity"

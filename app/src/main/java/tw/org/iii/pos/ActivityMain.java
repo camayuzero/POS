@@ -14,10 +14,37 @@ import android.util.Log;
 
 import java.util.zip.DeflaterInputStream;
 
-public class ActivityMain extends AppCompatActivity {
+public class ActivityMain extends AppCompatActivity implements AmountFragment.CallbackInterface {
 
-    public POS_Factory Get_POS_Factory() {
+    public POS_Factory Get_POS_Factory(){
         return pos_factory;
+    }
+
+    public SharedPreferences Get_SharedPreferences(){
+        return sharedPreferences;
+    }
+
+    public Fragment Get_DrinksTeaFragment(){
+        return drinksTeaFragment;
+    }
+
+    public Fragment Get_DrinksMilkTeaFragment(){
+        return drinksMilkTeaFragment;
+    }
+
+    public Fragment Get_AmountFragment(){
+        return amountFragment;
+    }
+
+    public Fragment Get_DisplayFragment(){
+        return displayFragment;
+    }
+
+//    public void Set_commodity_name(String commodity_name){
+//        ((AmountFragment)amountFragment).Set_commodity_name(commodity_name);
+//    }
+    public void Set_commodity_name(){
+//        ((AmountFragment)amountFragment).Set_commodity_name();
     }
 
     @Override
@@ -30,17 +57,29 @@ public class ActivityMain extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
         //取得交易物件
         fragmentTransaction = fragmentManager.beginTransaction();
-        //fragmentTransaction.add(容器,片段,TAG_標記名稱);
-        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksTeaFragment(), pos_factory
-                .TAG_DrinksTeaFragment);
-        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksMilkTeaFragment(), pos_factory
-                .TAG_DrinksMilkTeaFragment);
-        fragmentTransaction.add(R.id.fragmentDisplay, new DisplayFragment(), pos_factory
-                .TAG_DisplayFragment);
-        fragmentTransaction.add(R.id.fragmentAmount, new AmountFragment(), pos_factory
-                .TAG_AmountFragment);
-        fragmentTransaction.commit();   //啟動Fragment處理流程的執行續
-        fragmentManager.executePendingTransactions();   //立刻執行
+
+        drinksTeaFragment = new DrinksTeaFragment();
+        drinksMilkTeaFragment = new DrinksMilkTeaFragment();
+        amountFragment = new AmountFragment();
+        displayFragment = new DisplayFragment();
+//        //fragmentTransaction.add(容器,片段,TAG_標記名稱);
+//        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksTeaFragment(), pos_factory
+//                .TAG_DrinksTeaFragment);
+//        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksMilkTeaFragment(), pos_factory
+//                .TAG_DrinksMilkTeaFragment);
+//        fragmentTransaction.add(R.id.fragmentDisplay, new DisplayFragment(), pos_factory
+//                .TAG_DisplayFragment);
+//        fragmentTransaction.add(R.id.fragmentAmount, new AmountFragment(), pos_factory
+//                .TAG_AmountFragment);
+//        fragmentTransaction.commit();   //啟動Fragment處理流程的執行續
+//        fragmentManager.executePendingTransactions();   //立刻執行
+
+        sharedPreferences = getSharedPreferences(pos_factory.KEY_drink,MODE_PRIVATE);
+
+//        drinksTeaFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DrinksTeaFragment);
+//        drinksMilkTeaFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DrinksMilkTeaFragment);
+//        amountFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_AmountFragment);
+//        displayFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DisplayFragment);
 
         selectsPagerAdapter = new SelectsPagerAdapter(fragmentManager);
         InitialComponent();
@@ -62,26 +101,12 @@ public class ActivityMain extends AppCompatActivity {
             //根據目前tab標籤頁的位置，傳回對應的fragment物件
             switch (position) {
                 case 0:
-
-//                    fragment = new DrinksTeaFragment();
-                    Log.d("kk","01");
-                    DrinksTeaFragment drinksTeaFragment = (DrinksTeaFragment)fm.findFragmentByTag(pos_factory.TAG_DrinksTeaFragment);
-                    Log.d("kk",String.valueOf((DrinksTeaFragment)fm.findFragmentByTag(pos_factory.TAG_DrinksTeaFragment) == null));
                     fragment = drinksTeaFragment;
-                    Log.d("kk",String.valueOf(fragment == null));
-                    Log.d("kk",String.valueOf(fragment.getClass()));
                     break;
                 case 1:
-//                    fragment = new DrinksMilkTeaFragment();
-                    Log.d("kk","02");
-                    DrinksMilkTeaFragment drinksMilkTeaFragment = (DrinksMilkTeaFragment)
- fm.findFragmentById(R.id.fragment_drinks_milktea);
-                    Log.d("kk",String.valueOf((DrinksMilkTeaFragment)fm.findFragmentByTag(pos_factory.TAG_DrinksMilkTeaFragment) == null));
                     fragment = drinksMilkTeaFragment;
-                    Log.d("kk",String.valueOf(fragment == null));
                     break;
             }
-            Log.d("kk",String.valueOf(fragment.getId()));
             return fragment;
         }
 
@@ -113,10 +138,15 @@ public class ActivityMain extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
     }
 
-    FragmentManager fragmentManager;
-    FragmentTransaction fragmentTransaction;
-    SelectsPagerAdapter selectsPagerAdapter;
-    ViewPager viewPager;
-    TabLayout tabLayout;
-    POS_Factory pos_factory;
+    private POS_Factory pos_factory;
+    private SharedPreferences sharedPreferences;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
+    private SelectsPagerAdapter selectsPagerAdapter;
+    private ViewPager viewPager;
+    private TabLayout tabLayout;
+    private Fragment drinksTeaFragment;
+    private Fragment drinksMilkTeaFragment;
+    private Fragment amountFragment;
+    private Fragment displayFragment;
 }

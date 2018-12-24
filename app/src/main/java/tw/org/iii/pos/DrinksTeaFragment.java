@@ -1,7 +1,10 @@
 package tw.org.iii.pos;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -9,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -20,10 +24,14 @@ public class DrinksTeaFragment extends Fragment {
     private View.OnClickListener button_Commodity01_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity01_Name.getText().toString());
-            Log.d("kk","pos_factory");
-            amountFragment.Set_commodity_name(pos_factory.getDrink_name());
-            Log.d("kk",pos_factory.getDrink_name());
+
+            try{
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,button_Commodity01_Name.getText().toString());
+                activityMain.Set_commodity_name();
+
+            }catch (Exception e){
+                Log.d("kkk1",e.getMessage());
+            }
         }
     };
 
@@ -62,17 +70,15 @@ public class DrinksTeaFragment extends Fragment {
         }
     };
 
+
+
     public DrinksTeaFragment() {
         // Required empty public constructor
     }
 
-    //Fragment的介面元件初始化必須放在這裡面
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        pos_factory = ((ActivityMain)getActivity()).Get_POS_Factory();
-        amountFragment = new AmountFragment();
-        InitialComponent();
     }
 
     @Override
@@ -80,6 +86,27 @@ public class DrinksTeaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_drinks_tea, container, false);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        activityMain = (ActivityMain)context;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        pos_factory = activityMain.Get_POS_Factory();
+        sharedPreferences = activityMain.Get_SharedPreferences();
+        amountFragment = (AmountFragment) activityMain.Get_AmountFragment();
+        InitialComponent();
     }
 
     private void InitialComponent() {
@@ -116,6 +143,8 @@ public class DrinksTeaFragment extends Fragment {
     TextView textView_Commodity05_Price;
     TextView textView_Commodity06_Price;
 
-    POS_Factory pos_factory;
-    AmountFragment amountFragment;
+    private POS_Factory pos_factory;
+    private AmountFragment amountFragment;
+    private SharedPreferences sharedPreferences;
+    private ActivityMain activityMain;
 }
