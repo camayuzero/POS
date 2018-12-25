@@ -10,9 +10,9 @@
     <string name="Title_IceContent">冰量</string>
     <string name="Title_Ingredients">配料</string>
     <string name="Title_History">歷史紀錄</string>
-    <string name="Title_TotalAmount">小計</string>
+    <string name="Title_TotalAmount">合計</string>
     <string name="Title_Pay">付款</string>
-    <string name="Title_Change">找回</string>
+    <string name="Title_Change">找零</string>
 
     <!--標題-->
     <string name="DrinksTitle_Name">品名</string>
@@ -38,15 +38,15 @@
     <!--價格-->
     <string name="Price_CeylonBlackTea">20</string>
     <string name="Price_DarjeelingTea">25</string>
-    <string name="Price_JasmineGreenTea">20</string>
-    <string name="Price_OolongTea">20</string>
+    <string name="Price_JasmineGreenTea">30</string>
+    <string name="Price_OolongTea">15</string>
     <string name="Price_PuerhTea">20</string>
-    <string name="Price_ChrysanthemumTea">20</string>
+    <string name="Price_ChrysanthemumTea">30</string>
     <string name="Price_BubbleMilkTea">40</string>
     <string name="Price_CoconutMilkTea">40</string>
-    <string name="Price_PuddingMilkTea">40</string>
-    <string name="Price_KantenMilkTea">45</string>
-    <string name="Price_GrassJellyMilkTea">45</string>
+    <string name="Price_PuddingMilkTea">45</string>
+    <string name="Price_KantenMilkTea">50</string>
+    <string name="Price_GrassJellyMilkTea">50</string>
 
     <!--按鈕-->
     <string name="button_01">1</string>

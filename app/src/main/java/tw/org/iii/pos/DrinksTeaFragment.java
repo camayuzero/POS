@@ -24,13 +24,18 @@ public class DrinksTeaFragment extends Fragment {
     private View.OnClickListener button_Commodity01_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
-            try{
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,button_Commodity01_Name.getText().toString());
-                activityMain.Set_commodity_name();
-
-            }catch (Exception e){
-                Log.d("kkk1",e.getMessage());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity01_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity01_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity01_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity01_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
             }
         }
     };
@@ -38,38 +43,97 @@ public class DrinksTeaFragment extends Fragment {
     private View.OnClickListener button_Commodity02_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity02_Name.getText().toString());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity02_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity02_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity02_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity02_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
+            }
         }
     };
 
     private View.OnClickListener button_Commodity03_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity03_Name.getText().toString());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity03_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity03_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity03_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity03_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
+            }
         }
     };
 
     private View.OnClickListener button_Commodity04_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity04_Name.getText().toString());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity04_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity04_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity04_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity04_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
+            }
         }
     };
 
     private View.OnClickListener button_Commodity05_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity05_Name.getText().toString());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity05_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity05_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity05_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity05_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
+            }
         }
     };
 
     private View.OnClickListener button_Commodity06_Name_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            pos_factory.setDrink_name(button_Commodity06_Name.getText().toString());
+            try {
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
+                        button_Commodity06_Name.getText().toString());
+                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
+                        textView_Commodity06_Price.getText().toString());
+                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                        (pos_factory.KEY_drink_name, button_Commodity06_Name.getText().toString()));
+                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                        (pos_factory.KEY_drink_price, textView_Commodity06_Price.getText()
+                                .toString()));
+            } catch (Exception e) {
+                Log.d("kkk1", e.getMessage());
+            }
         }
     };
-
 
 
     public DrinksTeaFragment() {
@@ -91,7 +155,10 @@ public class DrinksTeaFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activityMain = (ActivityMain)context;
+        if (null != context) {
+            activityMain = (ActivityMain) context;
+            interface_drinksTeaFragment = (Interface_DrinksTeaFragment) context;
+        }
     }
 
     @Override
@@ -105,7 +172,7 @@ public class DrinksTeaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         pos_factory = activityMain.Get_POS_Factory();
         sharedPreferences = activityMain.Get_SharedPreferences();
-        amountFragment = (AmountFragment) activityMain.Get_AmountFragment();
+//        amountFragment = (AmountFragment) activityMain.Get_AmountFragment();
         InitialComponent();
     }
 
@@ -147,4 +214,6 @@ public class DrinksTeaFragment extends Fragment {
     private AmountFragment amountFragment;
     private SharedPreferences sharedPreferences;
     private ActivityMain activityMain;
+    private Interface_DrinksTeaFragment interface_drinksTeaFragment;
+
 }

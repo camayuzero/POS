@@ -20,31 +20,26 @@ import android.widget.EditText;
  */
 public class AmountFragment extends Fragment {
 
-    public interface CallbackInterface{
-        public void Set_commodity_name();
-    }
-
 //    public void Set_commodity_name(String commodity_name){
 //        editText_select_commodity_name.setText(commodity_name);
 //    }
 //
-//    public void Set_commodity_name(){
-//        try{
-//            test = "123";
-//            editText_select_commodity_name.setText("123");
-//        }catch (Exception e){
-//            Log.d("kkk2",e.getMessage());
-//            Log.d("kkk2",getViewLifecycleOwner().toString());
-//        }
-//
-//    }
+    public void Set_commodity_name(String commodity_name){
+        try{
+            editText_select_commodity_name.setText(commodity_name);
+        }catch (Exception e){
+            Log.d("kkk2",e.getMessage());
+            Log.d("kkk2",getViewLifecycleOwner().toString());
+        }
+
+    }
 
     public void Set_commodity_price(String commodity_price){
-        editText_select_commodity_name.setText(commodity_price);
+        editText_select_commodity_price.setText(commodity_price);
     }
 
     public void Set_commodity_quantity(String commodity_quantity){
-        editText_select_commodity_name.setText(commodity_quantity);
+        editText_select_commodity_quantity.setText(commodity_quantity);
     }
 
     private View.OnClickListener button_00_click = new View.OnClickListener() {
@@ -181,7 +176,7 @@ public class AmountFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        sharedPreferences = ((ActivityMain)getActivity()).Get_SharedPreferences();
+        sharedPreferences = activityMain.Get_SharedPreferences();
         InitialComponent();
     }
 
@@ -195,7 +190,10 @@ public class AmountFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        activityMain = (ActivityMain)context;
+        if(null != context){
+            activityMain = (ActivityMain)context;
+            interface_amountFragment = (Interface_AmountFragment)context;
+        }
     }
 
     @Override
@@ -209,7 +207,6 @@ public class AmountFragment extends Fragment {
         pos_factory = activityMain.Get_POS_Factory();
         sharedPreferences = activityMain.Get_SharedPreferences();
         InitialComponent();
-        editText_select_commodity_name.setText(test);
     }
 
     private void InitialComponent() {
@@ -277,5 +274,5 @@ public class AmountFragment extends Fragment {
     private POS_Factory pos_factory;
     private ActivityMain activityMain;
 
-    private String test = "test";
+    private Interface_AmountFragment interface_amountFragment;
 }

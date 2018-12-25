@@ -14,38 +14,37 @@ import android.util.Log;
 
 import java.util.zip.DeflaterInputStream;
 
-public class ActivityMain extends AppCompatActivity implements AmountFragment.CallbackInterface {
+public class ActivityMain extends AppCompatActivity implements Interface_AmountFragment,
+        Interface_DrinksTeaFragment {
 
-    public POS_Factory Get_POS_Factory(){
+    public POS_Factory Get_POS_Factory() {
         return pos_factory;
     }
 
-    public SharedPreferences Get_SharedPreferences(){
+    public SharedPreferences Get_SharedPreferences() {
         return sharedPreferences;
     }
 
-    public Fragment Get_DrinksTeaFragment(){
+    public Fragment Get_DrinksTeaFragment() {
         return drinksTeaFragment;
     }
 
-    public Fragment Get_DrinksMilkTeaFragment(){
+    public Fragment Get_DrinksMilkTeaFragment() {
         return drinksMilkTeaFragment;
     }
 
-    public Fragment Get_AmountFragment(){
+    public Fragment Get_AmountFragment() {
         return amountFragment;
     }
 
-    public Fragment Get_DisplayFragment(){
+    public Fragment Get_DisplayFragment() {
         return displayFragment;
     }
 
 //    public void Set_commodity_name(String commodity_name){
 //        ((AmountFragment)amountFragment).Set_commodity_name(commodity_name);
 //    }
-    public void Set_commodity_name(){
-//        ((AmountFragment)amountFragment).Set_commodity_name();
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,22 +61,23 @@ public class ActivityMain extends AppCompatActivity implements AmountFragment.Ca
         drinksMilkTeaFragment = new DrinksMilkTeaFragment();
         amountFragment = new AmountFragment();
         displayFragment = new DisplayFragment();
-//        //fragmentTransaction.add(容器,片段,TAG_標記名稱);
+        //fragmentTransaction.add(容器,片段,TAG_標記名稱);
 //        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksTeaFragment(), pos_factory
 //                .TAG_DrinksTeaFragment);
 //        fragmentTransaction.add(R.id.viewPager_Drinks, new DrinksMilkTeaFragment(), pos_factory
 //                .TAG_DrinksMilkTeaFragment);
-//        fragmentTransaction.add(R.id.fragmentDisplay, new DisplayFragment(), pos_factory
-//                .TAG_DisplayFragment);
-//        fragmentTransaction.add(R.id.fragmentAmount, new AmountFragment(), pos_factory
-//                .TAG_AmountFragment);
-//        fragmentTransaction.commit();   //啟動Fragment處理流程的執行續
-//        fragmentManager.executePendingTransactions();   //立刻執行
+        fragmentTransaction.add(R.id.fragmentDisplay, displayFragment, pos_factory
+                .TAG_DisplayFragment);
+        fragmentTransaction.add(R.id.fragmentAmount, amountFragment, pos_factory
+                .TAG_AmountFragment);
+        fragmentTransaction.commit();   //啟動Fragment處理流程的執行續
+        fragmentManager.executePendingTransactions();   //立刻執行
 
-        sharedPreferences = getSharedPreferences(pos_factory.KEY_drink,MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(pos_factory.KEY_drink, MODE_PRIVATE);
 
 //        drinksTeaFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DrinksTeaFragment);
-//        drinksMilkTeaFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DrinksMilkTeaFragment);
+//        drinksMilkTeaFragment = fragmentManager.findFragmentByTag(pos_factory
+// .TAG_DrinksMilkTeaFragment);
 //        amountFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_AmountFragment);
 //        displayFragment = fragmentManager.findFragmentByTag(pos_factory.TAG_DisplayFragment);
 
@@ -85,13 +85,38 @@ public class ActivityMain extends AppCompatActivity implements AmountFragment.Ca
         InitialComponent();
     }
 
-    private class SelectsPagerAdapter extends FragmentPagerAdapter {
+    @Override
+    public void Set_commodity_name(String commodity_name) {
+        try {
+            amountFragment.Set_commodity_name(commodity_name);
+        } catch (Exception e) {
+            Log.d("Set_commodity_name01", e.getMessage());
+        }
+    }
 
-        FragmentManager fm;
+    @Override
+    public void Set_commodity_price(String commodity_price) {
+        try {
+            amountFragment.Set_commodity_price(commodity_price);
+        } catch (Exception e) {
+            Log.d("Set_commodity_name01", e.getMessage());
+        }
+    }
+
+    @Override
+    public void Call_Set_commodity_name(String commodity_name) {
+        Set_commodity_name(commodity_name);
+    }
+
+    @Override
+    public void Call_Set_commodity_price(String commodity_price) {
+        Set_commodity_price(commodity_price);
+    }
+
+    private class SelectsPagerAdapter extends FragmentPagerAdapter {
 
         public SelectsPagerAdapter(FragmentManager fm) {
             super(fm);
-            this.fm = fm;
         }
 
         @Override
@@ -142,8 +167,8 @@ public class ActivityMain extends AppCompatActivity implements AmountFragment.Ca
     private SelectsPagerAdapter selectsPagerAdapter;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private Fragment drinksTeaFragment;
-    private Fragment drinksMilkTeaFragment;
-    private Fragment amountFragment;
-    private Fragment displayFragment;
+    private DrinksTeaFragment drinksTeaFragment;
+    private DrinksMilkTeaFragment drinksMilkTeaFragment;
+    private AmountFragment amountFragment;
+    private DisplayFragment displayFragment;
 }

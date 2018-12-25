@@ -17,5 +17,6 @@
     <color name="color_TitleBackground05">#BBFFEE</color>
     <color name="color_TitleBackground06">#0000FF</color>
     <color name="color_EditTextBackground">#FFFFFF</color>
+    <color name="color_EditText_Text">#000000</color>
 
 </resources>
