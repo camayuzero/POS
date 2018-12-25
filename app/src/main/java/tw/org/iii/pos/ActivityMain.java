@@ -97,17 +97,14 @@ public class ActivityMain extends AppCompatActivity implements AmountFragment.Ca
         @Override
         public Fragment getItem(int position) {
 
-            Fragment fragment = null;
             //根據目前tab標籤頁的位置，傳回對應的fragment物件
             switch (position) {
                 case 0:
-                    fragment = drinksTeaFragment;
-                    break;
+                    return drinksTeaFragment;
                 case 1:
-                    fragment = drinksMilkTeaFragment;
-                    break;
+                    return drinksMilkTeaFragment;
             }
-            return fragment;
+            return null;
         }
 
         @Override
