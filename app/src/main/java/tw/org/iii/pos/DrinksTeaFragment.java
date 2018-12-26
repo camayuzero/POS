@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -25,13 +24,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity01_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity01_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity01_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity01_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -44,13 +39,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity02_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity02_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity02_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity02_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -63,13 +54,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity03_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity03_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity03_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity03_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -82,13 +69,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity04_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity04_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity04_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity04_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -101,13 +84,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity05_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity05_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity05_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity05_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -120,13 +99,9 @@ public class DrinksTeaFragment extends Fragment {
         @Override
         public void onClick(View v) {
             try {
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_name,
-                        button_Commodity06_Name.getText().toString());
-                sharedPreferences.edit().putString(pos_factory.KEY_drink_price,
-                        textView_Commodity06_Price.getText().toString());
-                interface_drinksTeaFragment.Call_Set_commodity_name(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_name(sharedPreferences.getString
                         (pos_factory.KEY_drink_name, button_Commodity06_Name.getText().toString()));
-                interface_drinksTeaFragment.Call_Set_commodity_price(sharedPreferences.getString
+                interface_drinksFragment.Set_commodity_price(sharedPreferences.getString
                         (pos_factory.KEY_drink_price, textView_Commodity06_Price.getText()
                                 .toString()));
             } catch (Exception e) {
@@ -157,7 +132,7 @@ public class DrinksTeaFragment extends Fragment {
         super.onAttach(context);
         if (null != context) {
             activityMain = (ActivityMain) context;
-            interface_drinksTeaFragment = (Interface_DrinksTeaFragment) context;
+            interface_drinksFragment = (Interface_DrinksFragment) context;
         }
     }
 
@@ -211,9 +186,8 @@ public class DrinksTeaFragment extends Fragment {
     TextView textView_Commodity06_Price;
 
     private POS_Factory pos_factory;
-    private AmountFragment amountFragment;
     private SharedPreferences sharedPreferences;
     private ActivityMain activityMain;
-    private Interface_DrinksTeaFragment interface_drinksTeaFragment;
+    private Interface_DrinksFragment interface_drinksFragment;
 
 }
