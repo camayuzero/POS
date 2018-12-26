@@ -2,7 +2,6 @@ package tw.org.iii.pos;
 
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -20,39 +19,52 @@ import android.widget.EditText;
  */
 public class AmountFragment extends Fragment {
 
-    public void Set_commodity_name(String commodity_name){
-        try{
+    public void Set_commodity_name(String commodity_name) {
+        try {
             editText_select_commodity_name.setText(commodity_name);
-        }catch (Exception e){
-            Log.d("kkk_AmountFragment",e.getMessage());
-            Log.d("kkk_AmountFragment",getViewLifecycleOwner().toString());
+        } catch (Exception e) {
+            Log.d("kkk_AmountFragment", e.getMessage());
+            Log.d("kkk_AmountFragment", getViewLifecycleOwner().toString());
         }
     }
 
-    public void Set_commodity_price(String commodity_price){
+    public void Set_commodity_price(String commodity_price) {
         editText_select_commodity_price.setText(commodity_price);
     }
 
-    public void Set_commodity_quantity(String commodity_quantity){
-        try{
-            editText_select_commodity_quantity.setText(commodity_quantity);
-            Log.d("kkk_AmountFragment",commodity_quantity);
-        }catch (Exception e){
-            Log.d("kkk_AmountFragment",e.getMessage());
-            Log.d("kkk_AmountFragment",getViewLifecycleOwner().toString());
+    public void Set_commodity_quantity(String commodity_quantity) {
+        try {
+            if (editText_select_commodity_quantity.getText().toString().isEmpty() || "0".equals
+                    (editText_select_commodity_quantity.getText().toString())) {
+                editText_select_commodity_quantity.setText(commodity_quantity);
+            } else {
+                editText_select_commodity_quantity.setText(editText_select_commodity_quantity
+                        .getText().toString() + commodity_quantity);
+            }
+
+            Log.d("kkk_AmountFragment", commodity_quantity);
+        } catch (Exception e) {
+            Log.d("kkk_AmountFragment", e.getMessage());
+            Log.d("kkk_AmountFragment", getViewLifecycleOwner().toString());
 
         }
+    }
+
+    public void Set_commodity_clear() {
+        editText_select_commodity_name.setText("");
+        editText_select_commodity_price.setText("");
+        editText_select_commodity_quantity.setText("");
     }
 
     private View.OnClickListener button_00_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            try{
-                interface_amountFragment.Set_commodity_quantity(button_00.getText().toString());
-                Log.d("kkk_AmountFragment",button_00.getText().toString());
-            }catch (Exception e){
-                Log.d("kkk_AmountFragment",e.getMessage());
-                Log.d("kkk_AmountFragment",getViewLifecycleOwner().toString());
+            try {
+                interface_drinksFragment.Set_commodity_quantity(button_00.getText().toString());
+                Log.d("kkk_AmountFragment", button_00.getText().toString());
+            } catch (Exception e) {
+                Log.d("kkk_AmountFragment", e.getMessage());
+                Log.d("kkk_AmountFragment", getViewLifecycleOwner().toString());
 
             }
         }
@@ -61,77 +73,77 @@ public class AmountFragment extends Fragment {
     private View.OnClickListener button_01_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_01.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_01.getText().toString());
         }
     };
 
     private View.OnClickListener button_02_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_02.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_02.getText().toString());
         }
     };
 
     private View.OnClickListener button_03_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_03.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_03.getText().toString());
         }
     };
 
     private View.OnClickListener button_04_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_04.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_04.getText().toString());
         }
     };
 
     private View.OnClickListener button_05_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_05.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_05.getText().toString());
         }
     };
 
     private View.OnClickListener button_06_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_06.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_06.getText().toString());
         }
     };
 
     private View.OnClickListener button_07_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_07.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_07.getText().toString());
         }
     };
 
     private View.OnClickListener button_08_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_08.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_08.getText().toString());
         }
     };
 
     private View.OnClickListener button_09_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_09.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_09.getText().toString());
         }
     };
 
     private View.OnClickListener button_500_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_500.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_500.getText().toString());
         }
     };
 
     private View.OnClickListener button_1000_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            interface_amountFragment.Set_commodity_quantity(button_1000.getText().toString());
+            interface_drinksFragment.Set_commodity_quantity(button_1000.getText().toString());
         }
     };
 
@@ -152,7 +164,7 @@ public class AmountFragment extends Fragment {
     private View.OnClickListener button_Correction_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            interface_drinksFragment.Set_commodity_clear();
         }
     };
 
@@ -166,7 +178,7 @@ public class AmountFragment extends Fragment {
     private View.OnClickListener button_Confirm_click = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+            interface_drinksFragment.Set_commodity_confirm();
         }
     };
 
@@ -190,24 +202,26 @@ public class AmountFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if(null != context){
-            activityMain = (ActivityMain)context;
-            interface_amountFragment = (Interface_AmountFragment)context;
+        if (null != context) {
+            activityMain = (ActivityMain) context;
+            interface_drinksFragment = (Interface_DrinksFragment) context;
         }
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        pos_factory = activityMain.Get_POS_Factory();
-//        sharedPreferences = activityMain.Get_SharedPreferences();
+//        pos_factory = activityMain.Get_POS_Factory();
         InitialComponent();
     }
 
     private void InitialComponent() {
-        editText_select_commodity_name= getView().findViewById(R.id.editText_select_commodity_name);
-        editText_select_commodity_price= getView().findViewById(R.id.editText_select_commodity_price);
-        editText_select_commodity_quantity= getView().findViewById(R.id.editText_select_commodity_quantity);
+        editText_select_commodity_name = getView().findViewById(R.id
+                .editText_select_commodity_name);
+        editText_select_commodity_price = getView().findViewById(R.id
+                .editText_select_commodity_price);
+        editText_select_commodity_quantity = getView().findViewById(R.id
+                .editText_select_commodity_quantity);
         button_00 = getView().findViewById(R.id.button_00);
         button_00.setOnClickListener(button_00_click);
         button_01 = getView().findViewById(R.id.button_01);
@@ -265,9 +279,7 @@ public class AmountFragment extends Fragment {
     Button button_Delete;
     Button button_Confirm;
 
-//    private SharedPreferences sharedPreferences;
-    private POS_Factory pos_factory;
+//    private POS_Factory pos_factory;
     private ActivityMain activityMain;
-//
-    private Interface_AmountFragment interface_amountFragment;
+    private Interface_DrinksFragment interface_drinksFragment;
 }

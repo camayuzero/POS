@@ -8,11 +8,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-public class ActivityMain extends AppCompatActivity implements Interface_DrinksFragment,Interface_AmountFragment{
+public class ActivityMain extends AppCompatActivity implements Interface_DrinksFragment{
 
     public POS_Factory Get_POS_Factory() {
         return pos_factory;
@@ -80,6 +81,33 @@ public class ActivityMain extends AppCompatActivity implements Interface_DrinksF
         } catch (Exception e) {
             Log.d("Set_commodity_quantity", e.getMessage());
         }
+    }
+
+    @Override
+    public void Set_commodity_clear() {
+        sharedPreferences.edit().remove(pos_factory.KEY_drink_name);
+        sharedPreferences.edit().remove(pos_factory.KEY_drink_price);
+        sharedPreferences.edit().remove(pos_factory.KEY_drink_quantity);
+        amountFragment.Set_commodity_clear();
+    }
+
+    @Override
+    public void Set_commodity_confirm() {
+        if(null==sharedPreferences.getString(pos_factory.KEY_drink_name,null)){
+            AlertDialog.Builder builder = new AlertDialog.Builder(ActivityMain.this);
+            builder.setMessage("未選擇飲料");
+            builder.show();
+            return;
+        }
+        if(null==sharedPreferences.getString(pos_factory.KEY_drink_quantity,null)){
+            AlertDialog.Builder builder = new AlertDialog.Builder(ActivityMain.this);
+            builder.setMessage("未設定數量");
+            builder.show();
+            return;
+        }
+
+        //
+        amountFragment.Set_commodity_clear();
     }
 
     private class SelectsPagerAdapter extends FragmentPagerAdapter {
